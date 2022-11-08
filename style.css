@@ -13,8 +13,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -59,7 +59,7 @@ svg {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 body {
   width: 100vw;
@@ -71,7 +71,7 @@ body {
     rgba(175, 103, 233, 1) 100%
   );
   font-size: 16px;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   color: hsl(238, 29%, 16%);
 }
 
