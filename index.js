@@ -1,6 +1,6 @@
 import './style.css';
 
-const faqs = document.querySelectorAll('.faqs');
+const faqs = document.querySelectorAll('.faq');
 let activeFaq = undefined;
 let faq = undefined;
 
