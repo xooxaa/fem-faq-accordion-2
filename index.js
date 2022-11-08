@@ -13,7 +13,7 @@ const toggleVisibility = function (e) {
       activeFaq.children[1].classList.add('hide');
     }
 
-    faq = pathpath[pathpath.length - 7];
+    faq = pathpath[pathpath.length - 8];
     faq.children[0].classList.add('active');
     faq.children[1].classList.remove('hide');
     activeFaq = faq;

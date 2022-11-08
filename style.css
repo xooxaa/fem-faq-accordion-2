@@ -75,12 +75,16 @@ body {
   color: hsl(238, 29%, 16%);
 }
 
-.container {
-  background-color: white;
+.super-container {
+  position: relative;
   width: 90%;
   margin: 0 auto;
-  position: relative;
   top: 18%;
+}
+
+.container {
+  background-color: white;
+  position: relative;
   border-radius: 1.5rem;
 }
 
@@ -159,9 +163,12 @@ body {
 }
 
 @media only screen and (min-width: 750px) {
-  .container {
+  .super-container {
     max-width: 1080px;
-    height: 40rem;
+  }
+
+  .container {
+    min-height: 40rem;
     position: relative;
     overflow: hidden;
   }
@@ -179,8 +186,6 @@ body {
   .logo-bg {
     content: url(https://raw.githubusercontent.com/xooxaa/fem-faq-accordion/f17a7b8dd21526a7932193aebaa686c2f1df7a31/images/bg-pattern-desktop.svg);
 
-    display: unset;
-
     position: absolute;
     width: 1100px;
     height: 1100px;
@@ -191,15 +196,13 @@ body {
 
   .box {
     display: block;
-    position: absolute;
-    width: 150px;
 
     position: absolute;
     width: 200px;
     height: 200px;
 
-    top: calc((100% - 150px) / 2);
-    left: -23px;
+    top: 240px;
+    left: -97px;
 
     z-index: 50;
   }
