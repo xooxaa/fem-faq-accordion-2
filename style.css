@@ -76,14 +76,14 @@ body {
 
 .content-container {
   width: 100%;
-  padding: 3rem;
+  padding: 2.4rem;
 }
 
 .content-container h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .faq-title {
@@ -96,6 +96,7 @@ body {
 
   font-size: 0.9rem;
   padding: 1rem 0;
+  padding-right: 1.2rem;
 
   border-bottom: 1px solid hsl(240, 5%, 91%);
   cursor: pointer;
@@ -106,24 +107,28 @@ body {
   color: hsl(14, 88%, 65%);
 }
 
+input[type="radio"] {
+  appearance: none;
+  position: absolute;
+}
+
 .faq-title img {
   width: 0.7rem;
   height: 0.5rem;
 
   position: absolute;
   right: 0;
-
-
-}
-
-input[type="radio"] {
-  appearance: none;
-  position: absolute;
 }
 
 input[type="radio"]:checked + label {
   font-weight: 700;
   color: hsl(237, 12%, 33%);
+}
+
+.faq-answer {
+  font-size: 0;
+  opacity: 0;
+  transition: 300ms padding ease-in-out, 300ms opacity ease-in-out;
 }
 
 input[type="radio"]:checked + label p {
@@ -137,11 +142,4 @@ input[type="radio"]:checked + label p {
 input[type="radio"]:checked + label img {
   transform: rotate(180deg);
   transition: 300ms transform  ease-in-out;
-}
-
-.faq-answer {
-  margin-right: 1.5rem;
-  font-size: 0;
-  opacity: 0;
-  transition: 300ms padding ease-in-out, 300ms opacity ease-in-out;
 }
