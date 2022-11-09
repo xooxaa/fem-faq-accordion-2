@@ -21,7 +21,7 @@ body {
   background: linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,
-    rgba(175, 103, 233, 1) 75%
+    rgba(175, 103, 233, 1) 100%
   );
 
   font-size: 1rem;
@@ -91,7 +91,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
   position: relative;
 
   font-size: 0.9rem;
@@ -126,14 +125,15 @@ input[type="radio"]:checked + label {
 }
 
 .faq-answer {
+  font-weight: 400;
+  color: hsl(240, 6%, 50%);
   font-size: 0;
   opacity: 0;
   transition: 300ms padding ease-in-out, 300ms opacity ease-in-out;
 }
 
 input[type="radio"]:checked + label p {
-  font-weight: 400;
-  color: hsl(240, 6%, 50%);
+
   font-size: 0.9rem;
   padding-top: 0.5rem;
   opacity: 1;
