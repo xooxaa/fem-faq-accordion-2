@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
     <main class="super-container">
+      <img
+        src="/images/illustration-box-desktop.svg"
+        alt=""
+        aria-hidden="true"
+        class="box-illu"
+      />
+
       <div class="container">
         <!-- FAQ Illustration -->
         <div class="logo-container">
@@ -18,8 +26,18 @@
             src="/images/illustration-woman-online-mobile.svg"
             alt=""
             aria-hidden="true"
-            class="logo"
+            class="logo top-illu"
           />
+
+          <img
+            src="/images/bg-pattern-mobile.svg"
+            alt=""
+            aria-hidden="true"
+            class="logo bottom-illu"
+          />
+
+
+        </div>
           <!-- <div class="logo">
             <picture class="top-illu">
               <source
@@ -52,15 +70,14 @@
               />
             </picture>
           </div> -->
-        </div>
+
 
         <!-- FAQ Article -->
         <article class="content-container">
           <h1>FAQ</h1>
 
           <!-- FAQ 1 -->
-          <div class="faq">
-            <input type="checkbox" id="faq1" />
+            <input type="radio" id="faq1" name="faq-radio" />
             <label id="title1" for="faq1" class="faq-title"
               >How many team members can I invite?
               <img
@@ -73,11 +90,9 @@
                 is no limit on team members for the Premium plan.
               </p>
             </label>
-          </div>
 
           <!-- FAQ 2 -->
-          <div class="faq">
-            <input type="checkbox" id="faq2" />
+            <input type="radio" id="faq2" name="faq-radio" />
             <label id="title2" for="faq2" class="faq-title"
               >What is the maximum file upload size?
               <img
@@ -90,11 +105,9 @@
                 allotted storage space.
               </p>
             </label>
-          </div>
 
           <!-- FAQ 3 -->
-          <div class="faq">
-            <input type="checkbox" id="faq3" />
+            <input type="radio" id="faq3" name="faq-radio" />
             <label id="title3" for="faq3" class="faq-title"
               >How do I reset my password?
               <img
@@ -107,11 +120,9 @@
                 from your profile page. A reset link will be emailed to you.
               </p>
             </label>
-          </div>
 
           <!-- FAQ 4 -->
-          <div class="faq">
-            <input type="checkbox" id="faq4" />
+            <input type="radio" id="faq4" name="faq-radio" />
             <label id="title4" for="faq4" class="faq-title"
               >Can I cancel my subscription?
               <img
@@ -124,11 +135,9 @@
                 questions asked.
               </p>
             </label>
-          </div>
 
           <!-- FAQ 5 -->
-          <div class="faq">
-            <input type="checkbox" id="faq5" />
+            <input type="radio" id="faq5" name="faq-radio" />
             <label id="title5" for="faq5" class="faq-title"
               >Do you provide additional support?
               <img
@@ -141,7 +150,8 @@
                 during normal business hours.
               </p>
             </label>
-          </div>
+
+
         </article>
       </div>
     </main>

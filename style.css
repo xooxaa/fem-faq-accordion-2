@@ -1,93 +1,43 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg {
-  /* max-width: 100%; */
-  display: block;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/*************************************************************/
+/*********************************************** CSS Reset */
+*, *::before, *::after {box-sizing: border-box;}
+* {margin: 0; padding: 0; font: inherit;}
+ul[role="list"], ol[role="list"] {list-style: none;}
+html:focus-within {scroll-behavior: smooth;}
+body {min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.5;}
+a:not([class]) {text-decoration-skip-ink: auto;}
+img, picture, svg {max-width: 100%; display: block;}
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  html:focus-within {scroll-behavior: auto;}
+  *, *::before, *::after {animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important;}
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/*************************************************************/
+/****************************************** Custom Styling */
 
 body {
-  width: 100vw;
-  height: 100vh;
   background: rgb(101, 101, 231);
   background: linear-gradient(
     0deg,
     rgba(101, 101, 231, 1) 0%,
     rgba(175, 103, 233, 1) 100%
   );
-  font-size: 0.9rem;
+
+  font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(238, 29%, 16%);
 }
 
 .super-container {
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 35vw;
 }
 
 .container {
   background-color: white;
-  width: 90%;
-  height: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -96,18 +46,15 @@ body {
 
 .logo-container {
   position: relative;
-  height: 160px;
+  height: 25vw;
   width: 100%;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: end;
 }
 
 .logo {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
 }
 
 .top-illu {
@@ -115,93 +62,25 @@ body {
 }
 
 .bottom-illu {
-  display: none;
+  z-index: 10;
+  bottom: -7.5vw;
 }
 
 .box-illu {
   display: none;
+  position: absolute;
 }
 
 .content-container {
-  height: 400px;
-  width: 300px;
-
-  background-color: yellow;
-
-  text-align: center;
-}
-
-footer {
-  background-color: #333;
   width: 100%;
-  padding: 0;
+  padding: 3rem;
+}
+
+.content-container h1 {
   text-align: center;
-  position: fixed;
-  bottom: 0;
-}
-
-/*
-main {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-picture {
-  position: relative;
-}
-
-.top-illu {
-  position: absolute;
-  width: 25rem;
-  top: 1rem;
-  z-index: 20;
-}
-
-.bottom-illu {
-  position: absolute;
-  top: 12rem;
-  z-index: 10;
-}
-
-.bottom-illu img {
-  width: 25rem;
-  height: auto;
-}
-
-.box-illu {
-  position: absolute;
-  display: none;
-  width: 300px;
-  height: 300px;
-  z-index: 50;
-}
-
-main article {
-  width: 90%;
-  height: 70%;
-  background-color: white;
-
-  overflow: auto;
-  scrollbar-color: hsl(14, 88%, 65%) white;
-  scrollbar-width: thin;
-  padding: 1rem;
-
-  border-radius: 2.5rem;
-}
-
-main article h1 {
-  text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  padding-top: 12rem;
-}
-
-.faq {
-  padding: 0 1rem;
+  padding-bottom: 1rem;
 }
 
 .faq-title {
@@ -209,7 +88,12 @@ main article h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+.faq-title:hover {
+  font-weight: 700;
+  color: hsl(14, 88%, 65%);
 }
 
 .faq-title img {
@@ -217,19 +101,28 @@ main article h1 {
   height: 0.5rem;
 }
 
-.faq-title p {
-  font-size: 0.9rem;
-}
-
-input[type="checkbox"] {
+input[type="radio"] {
   appearance: none;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="radio"]:checked + label {
   font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--very-dark-grayish-blue);
+  color: hsl(237, 12%, 33%);
 }
+
+input[type="radio"]:checked + label p {
+  font-weight: 400;
+  color: hsl(240, 6%, 50%);
+  display: block;
+}
+
+.faq-answer {
+  font-size: 0.8rem;
+  display: none;
+}
+
+
+
 
 footer {
   background-color: #333;
@@ -238,166 +131,4 @@ footer {
   text-align: center;
   position: fixed;
   bottom: 0;
-} */
-
-/*
-
-
-
-
-body {
-  width: 100vw;
-  height: 100vh;
-  background: rgb(101, 101, 231);
-  background: linear-gradient(
-    0deg,
-    rgba(101, 101, 231, 1) 0%,
-    rgba(175, 103, 233, 1) 100%
-  );
-  font-size: 16px;
-  font-family: "Kumbh Sans", sans-serif;
-  color: hsl(238, 29%, 16%);
 }
-
-.super-container {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-  top: 18%;
-}
-
-.container {
-  background-color: white;
-  position: relative;
-  border-radius: 1.5rem;
-}
-
-.logo {
-  position: absolute;
-  width: 320px;
-
-  top: -140px;
-  left: calc((100% - 320px) / 2);
-
-  z-index: 30;
-}
-
-.logo-bg {
-  position: absolute;
-  width: 320px;
-
-  top: 0;
-  left: calc((100% - 320px) / 2);
-
-  z-index: 20;
-}
-
-.faqs {
-  padding: 2rem;
-  padding-top: 200px;
-}
-
-.heading {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  padding-bottom: 1.5rem;
-}
-
-.faq {
-  margin: 1rem auto;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid hsl(240, 5%, 91%);
-}
-
-.faq-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.3rem 0;
-
-  cursor: pointer;
-}
-
-.active {
-  font-weight: 700;
-}
-
-.faq:hover .faq-heading {
-  color: hsl(14, 88%, 65%);
-  font-weight: 700;
-}
-
-.faq-arrow {
-  height: 10px;
-}
-
-.faq-answer {
-  color: hsl(240, 6%, 50%);
-  padding: 0.2rem 0;
-}
-
-.hide {
-  display: none;
-  height: 0;
-}
-
-.box {
-  display: none;
-}
-
-@media only screen and (min-width: 750px) {
-  .super-container {
-    max-width: 1080px;
-  }
-
-  .container {
-    min-height: 40rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .logo {
-    content: url(https://raw.githubusercontent.com/xooxaa/fem-faq-accordion/f17a7b8dd21526a7932193aebaa686c2f1df7a31/images/illustration-woman-online-desktop.svg);
-
-    position: absolute;
-    width: 500px;
-
-    top: calc((100% - 420px) / 2);
-    left: -80px;
-  }
-
-  .logo-bg {
-    content: url(https://raw.githubusercontent.com/xooxaa/fem-faq-accordion/f17a7b8dd21526a7932193aebaa686c2f1df7a31/images/bg-pattern-desktop.svg);
-
-    position: absolute;
-    width: 1100px;
-    height: 1100px;
-
-    top: calc((100% - 1300px) / 2);
-    left: -660px;
-  }
-
-  .box {
-    display: block;
-
-    position: absolute;
-    width: 200px;
-    height: 200px;
-
-    top: 240px;
-    left: -97px;
-
-    z-index: 50;
-  }
-
-  .faqs {
-    width: 45%;
-    margin-left: 45%;
-    padding-top: 5rem;
-  }
-
-  .heading {
-    text-align: start;
-  }
-} */
