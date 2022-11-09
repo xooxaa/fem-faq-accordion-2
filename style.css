@@ -42,6 +42,8 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+
+  border-radius: 2rem;
 }
 
 .logo-container {
@@ -88,7 +90,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+
   font-size: 0.9rem;
+  padding: 1rem 0;
+
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  cursor: pointer;
 }
 
 .faq-title:hover {
@@ -99,10 +108,16 @@ body {
 .faq-title img {
   width: 0.7rem;
   height: 0.5rem;
+
+  position: absolute;
+  right: 0;
+
+
 }
 
 input[type="radio"] {
   appearance: none;
+  position: absolute;
 }
 
 input[type="radio"]:checked + label {
@@ -113,12 +128,21 @@ input[type="radio"]:checked + label {
 input[type="radio"]:checked + label p {
   font-weight: 400;
   color: hsl(240, 6%, 50%);
-  display: block;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  opacity: 1;
+}
+
+input[type="radio"]:checked + label img {
+  transform: rotate(180deg);
+  transition: 300ms transform  ease-in-out;
 }
 
 .faq-answer {
-  font-size: 0.8rem;
-  display: none;
+  margin-right: 1.5rem;
+  font-size: 0;
+  opacity: 0;
+  transition: 300ms padding ease-in-out, 300ms opacity ease-in-out;
 }
 
 
@@ -126,9 +150,23 @@ input[type="radio"]:checked + label p {
 
 footer {
   background-color: #333;
+  color: white;
   width: 100%;
   padding: 0;
   text-align: center;
   position: fixed;
   bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    padding: 0.5em 0.4em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition: 300ms font-size ease-in-out;
+}
+footer a:hover{
+    color: hsl(14, 88%, 65%);
 }
