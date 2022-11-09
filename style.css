@@ -133,7 +133,6 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:checked + label p {
-
   font-size: 0.9rem;
   padding-top: 0.5rem;
   opacity: 1;
