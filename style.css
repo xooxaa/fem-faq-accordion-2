@@ -1,17 +1,49 @@
 /*************************************************************/
 /*********************************************** CSS Reset */
-*, *::before, *::after {box-sizing: border-box;}
-* {margin: 0; padding: 0; font: inherit;}
-ul[role="list"], ol[role="list"] {list-style: none;}
-html:focus-within {scroll-behavior: smooth;}
-body {min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.5;}
-a:not([class]) {text-decoration-skip-ink: auto;}
-img, picture, svg {max-width: 100%; display: block;}
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {scroll-behavior: auto;}
-  *, *::before, *::after {animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /*************************************************************/
 /****************************************** Custom Styling */
@@ -27,37 +59,31 @@ body {
   font-size: 1rem;
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(238, 29%, 16%);
-}
 
-.super-container {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 35vw;
-  padding-bottom: 2rem;
+  display: grid;
+  place-content: center;
 }
 
 .container {
+  position: relative;
   background-color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
 
   border-radius: 2rem;
+  margin-top: 100px;
 }
 
 .logo-container {
-  position: relative;
-  height: 25vw;
+  position: absolute;
+  height: 280px;
   width: 100%;
+
+  left: 50px;
+  top: -120px;
 }
 
 .logo {
   position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
+  width: 260px;
 }
 
 .top-illu {
@@ -66,7 +92,7 @@ body {
 
 .bottom-illu {
   z-index: 10;
-  bottom: -7.5vw;
+  bottom: 60px;
 }
 
 .box-illu {
@@ -75,15 +101,16 @@ body {
 }
 
 .content-container {
-  width: 100%;
-  padding: 2.4rem;
+  width: 360px;
+  padding: 2rem;
+  padding-bottom: 1rem;
 }
 
 .content-container h1 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 1rem;
+  padding-top: 4rem;
 }
 
 .faq-title {
@@ -133,12 +160,107 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:checked + label p {
-  font-size: 0.9rem;
-  padding-top: 0.5rem;
+  font-size: 0.84rem;
+  padding-top: 0rem;
   opacity: 1;
 }
 
 input[type="radio"]:checked + label img {
   transform: rotate(180deg);
-  transition: 300ms transform  ease-in-out;
+  transition: 300ms transform ease-in-out;
+}
+
+@media screen and (min-width: 750px) {
+  .box-illu {
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: 100;
+    left: -2%;
+    top: 39%;
+  }
+
+  .container {
+    margin-top: inherit;
+    overflow: hidden;
+  }
+
+  .logo-container {
+    top: calc(50% - 170px);
+    left: -60px;
+    position: absolute;
+  }
+
+  .logo {
+    position: relative;
+    width: 340px;
+  }
+
+  .top-illu {
+    content: url("./images/illustration-woman-online-desktop.svg");
+  }
+
+  .bottom-illu {
+    position: absolute;
+    content: url("./images/bg-pattern-desktop.svg");
+    width: 650px;
+    left: -310px;
+    top: -200px;
+  }
+
+  .content-container {
+    width: 90vw;
+    max-width: 920px;
+    padding: 1rem;
+    padding-top: inherit;
+    padding-left: 45%;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  .box-illu {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 100;
+    left: -2%;
+    top: 38%;
+  }
+
+  .container {
+    margin-top: inherit;
+    overflow: hidden;
+  }
+
+  .logo-container {
+    top: calc(50% - 210px);
+    left: -60px;
+    position: absolute;
+  }
+
+  .logo {
+    position: relative;
+    width: 420px;
+  }
+
+  .bottom-illu {
+    width: 800px;
+    left: -380px;
+    top: -600px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .box-illu {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 100;
+    left: calc((100vw - 920px) / 2 - 70px);
+    top: 38%;
+  }
 }

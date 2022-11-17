@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts and Stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Preload images for Desktop Layout -->
+    <link
+      rel="preload"
+      href="./images/illustration-woman-online-desktop.svg"
+      as="image"
+    />
+    <link rel="preload" href="./images/bg-pattern-desktop.svg" as="image" />
+
+    <!-- Page Title -->
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
+
+  <!-- Body -->
   <body>
-    <main class="super-container">
+    <main>
+      <!-- Box Image or Desktop Design outside of container (bc Overflow)-->
       <img
         src="./images/illustration-box-desktop.svg"
         alt=""
         aria-hidden="true"
         class="box-illu"
       />
-
       <div class="container">
         <!-- FAQ Illustration -->
         <div class="logo-container">
@@ -35,127 +50,68 @@
             aria-hidden="true"
             class="logo bottom-illu"
           />
-
-
         </div>
-          <!-- <div class="logo">
-            <picture class="top-illu">
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/illustration-woman-online-desktop.svg"
-              />
-              <img
-                src="/images/illustration-woman-online-mobile.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </picture>
-
-            <img
-              class="box-illu move-up"
-              src="/images/illustration-box-desktop.svg"
-              alt=""
-              aria-hidden="true"
-            />
-
-            <picture class="bottom-illu">
-              <source
-                media="(min-width: 768px)"
-                srcset="/images/bg-pattern-desktop.svg"
-              />
-              <img
-                src="/images/bg-pattern-mobile.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </picture>
-          </div> -->
-
 
         <!-- FAQ Article -->
         <article class="content-container">
           <h1>FAQ</h1>
 
           <!-- FAQ 1 -->
-            <input type="radio" id="faq1" name="faq-radio" />
-            <label id="title1" for="faq1" class="faq-title"
-              >How many team members can I invite?
-              <img
-                src="./images/icon-arrow-down.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              <p id="answer1" for="title1" class="faq-answer">
-                You can invite up to 2 additional users on the Free plan. There
-                is no limit on team members for the Premium plan.
-              </p>
-            </label>
+          <input type="radio" id="faq1" name="faq-radio" />
+          <label id="title1" for="faq1" class="faq-title"
+            >How many team members can I invite?
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" />
+            <p id="answer1" for="title1" class="faq-answer">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </label>
 
           <!-- FAQ 2 -->
-            <input type="radio" id="faq2" name="faq-radio" />
-            <label id="title2" for="faq2" class="faq-title"
-              >What is the maximum file upload size?
-              <img
-                src="./images/icon-arrow-down.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              <p id="answer2" for="title2" class="faq-answer">
-                No more than 2GB. All files in your account must fit your
-                allotted storage space.
-              </p>
-            </label>
+          <input type="radio" id="faq2" name="faq-radio" />
+          <label id="title2" for="faq2" class="faq-title"
+            >What is the maximum file upload size?
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" />
+            <p id="answer2" for="title2" class="faq-answer">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </label>
 
           <!-- FAQ 3 -->
-            <input type="radio" id="faq3" name="faq-radio" />
-            <label id="title3" for="faq3" class="faq-title"
-              >How do I reset my password?
-              <img
-                src="./images/icon-arrow-down.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              <p id="answer3" for="title1" class="faq-answer">
-                Click “Forgot password” from the login page or “Change password”
-                from your profile page. A reset link will be emailed to you.
-              </p>
-            </label>
+          <input type="radio" id="faq3" name="faq-radio" />
+          <label id="title3" for="faq3" class="faq-title"
+            >How do I reset my password?
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" />
+            <p id="answer3" for="title1" class="faq-answer">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </label>
 
           <!-- FAQ 4 -->
-            <input type="radio" id="faq4" name="faq-radio" />
-            <label id="title4" for="faq4" class="faq-title"
-              >Can I cancel my subscription?
-              <img
-                src="./images/icon-arrow-down.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              <p id="answer4" for="title1" class="faq-answer">
-                Yes! Send us a message and we’ll process your request no
-                questions asked.
-              </p>
-            </label>
+          <input type="radio" id="faq4" name="faq-radio" />
+          <label id="title4" for="faq4" class="faq-title"
+            >Can I cancel my subscription?
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" />
+            <p id="answer4" for="title1" class="faq-answer">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </label>
 
           <!-- FAQ 5 -->
-            <input type="radio" id="faq5" name="faq-radio" />
-            <label id="title5" for="faq5" class="faq-title"
-              >Do you provide additional support?
-              <img
-                src="./images/icon-arrow-down.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              <p id="answer5" for="title1" class="faq-answer">
-                Chat and email support is available 24/7. Phone lines are open
-                during normal business hours.
-              </p>
-            </label>
-
-
+          <input type="radio" id="faq5" name="faq-radio" />
+          <label id="title5" for="faq5" class="faq-title"
+            >Do you provide additional support?
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" />
+            <p id="answer5" for="title1" class="faq-answer">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </label>
         </article>
       </div>
     </main>
-
-
   </body>
 </html>
